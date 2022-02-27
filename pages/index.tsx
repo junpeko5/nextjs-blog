@@ -5,7 +5,13 @@ import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link'
 import Date from '../components/date'
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData }: {
+  allPostsData: {
+    date: string
+    title: string
+    id: string
+  }[]
+}) {
   return (
     <Layout home>
       <Head>
@@ -13,7 +19,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          ソフトウェアエンジニア。1989年生まれ大阪府岸和田市在住のフリーランス。PHP、バックエンド開発が得意。テニス、フットサル、だんじり、ケツメイシ、競馬、プログラミングが好き！最近はWebフロントエンド沼にハマってます！
+          ソフトウェアエンジニア。1989年生まれ大阪府岸和田市在住のフリーランス。PHP、バックエンド開発が得意。テニス、フットサル、だんじり、ケツメイシ、競馬、プログラミングが好き！最近はWebフロントエンド沼にハマってます。
         </p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
